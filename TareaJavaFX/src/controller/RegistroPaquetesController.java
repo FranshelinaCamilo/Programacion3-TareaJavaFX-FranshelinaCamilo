@@ -117,14 +117,13 @@ public class RegistroPaquetesController {
                 Platform.runLater(() -> {
                     progressBar.setProgress(progreso / 10.0);
                     lblMensajes.setText("Guardando paquete... " + (progreso * 10) + "%");
-                });
-
-                ArchivoUtil.guardarPaquete(paquete);
+                });}
 
                 Platform.runLater(() -> {
                     progressBar.setProgress(0);
                     lblMensajes.setText("Paquete guardado exitosamente");
-                });}
+                });
+
             } catch (InterruptedException e) {
                 lblMensajes.setText("Error al guardar el paquete...");
             }

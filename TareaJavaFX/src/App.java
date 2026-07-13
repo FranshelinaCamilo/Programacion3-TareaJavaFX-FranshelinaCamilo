@@ -10,7 +10,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage PrimaryStage) throws Exception {
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Principal.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Principal.fxml")); 
 
         Scene scene = new Scene(loader.load());
         PrimaryStage.setTitle("Sistema de Registro de Paquetes y Destinos");
