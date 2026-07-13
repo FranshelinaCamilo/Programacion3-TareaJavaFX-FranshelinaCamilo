@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="controller.PrincipalController" prefHeight="361.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="MBMenu" prefWidth="598.0">
+        <menus>
+          <Menu fx:id="MArchivo" mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="MIRegistroPaquete" mnemonicParsing="false" onAction="#abrirRegistroPaquetes" text="Registro de paquetes" />
+                  <MenuItem fx:id="MIRegistroDestino" mnemonicParsing="false" onAction="#abrirRegistroDestinos" text="Registro de destinos" />
+                  <MenuItem fx:id="MIConsultaPaquete" mnemonicParsing="false" onAction="#abrirConsultaPaquetes" text="Consulta de paquetes" />
+                  <MenuItem fx:id="MIConsultaDestino" mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consulta de destinos" />
+                  <MenuItem fx:id="MiClose" mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu fx:id="MProcesos" mnemonicParsing="false" text="Procesos">
+            <items>
+              <MenuItem fx:id="MIGuardarHilo" mnemonicParsing="false" onAction="#guardadoSinDatos" text="Guardar con Hilo" />
+                  <MenuItem fx:id="MIRunLater" mnemonicParsing="false" onAction="#guardadoSinDatos" text="runLater" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="lblTitulo" alignment="CENTER" layoutX="118.0" layoutY="147.0" prefHeight="68.0" prefWidth="362.0" style="-fx-font-weight: bold;" text="Bienvenido al Sistema de Registro de Paquetes y Destinos" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMensajes" alignment="CENTER" contentDisplay="CENTER" layoutX="190.0" layoutY="252.0" prefHeight="58.0" prefWidth="219.0" text="..." textAlignment="CENTER" wrapText="true" />
+   </children>
+</Pane>

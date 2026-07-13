@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane fx:controller="controller.RegistroDestinosController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="MBMenu" layoutX="1.0" prefHeight="25.0" prefWidth="520.0">
+         <menus>
+            <Menu fx:id="MArchivo" mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem fx:id="MIRegistroPaquete" mnemonicParsing="false" onAction="#abrirRegistroPaquetes" text="Registro de paquetes" />
+                  <MenuItem fx:id="MIRegistroDestino" mnemonicParsing="false" onAction="#abrirRegistroDestinos" text="Registro de destinos" />
+                  <MenuItem fx:id="MIConsultaPaquete" mnemonicParsing="false" onAction="#abrirConsultaPaquetes" text="Consulta de paquetes" />
+                  <MenuItem fx:id="MIConsultaDestino" mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consulta de destinos" />
+                  <MenuItem fx:id="MiClose" mnemonicParsing="false" onAction="#salir" text="Salir" />
+               </items>
+            </Menu>
+            <Menu fx:id="MProcesos" mnemonicParsing="false" text="Procesos">
+               <items>
+                  <MenuItem fx:id="MIGuardarHilo" mnemonicParsing="false" onAction="#guardadoSinDatos" text="Guardar con Hilo" />
+                  <MenuItem fx:id="MIRunLater" mnemonicParsing="false" onAction="#guardadoSinDatos" text="runLater" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="lblTitulo" layoutX="175.0" layoutY="67.0" text="Registro de Destinos">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDestino" layoutX="178.0" layoutY="112.0" prefHeight="25.0" prefWidth="167.0" promptText="Digite el destino" />
+      <Button fx:id="btnGuardar" layoutX="144.0" layoutY="181.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="77.0" text="Guardar" onAction="#guardarDestino" />
+      <Button fx:id="btnCargar" layoutX="299.0" layoutY="181.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="77.0" text="Cargar" onAction="#abrirConsultaDestinos"/>
+      <Label fx:id="lblMensajes" alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="231.0" prefHeight="41.0" prefWidth="177.0" text="Esperando datos ..." textAlignment="CENTER" wrapText="true" />
+   </children>
+</Pane>

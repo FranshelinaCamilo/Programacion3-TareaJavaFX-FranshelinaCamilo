@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:controller="controller.RegistroPaquetesController" prefHeight="437.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+      <MenuBar fx:id="MBMenu" prefWidth="598.0">
+         <menus>
+            <Menu fx:id="MArchivo" mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem fx:id="MIRegistroPaquete" mnemonicParsing="false" onAction="#abrirRegistroPaquetes" text="Registro de paquetes" />
+                  <MenuItem fx:id="MIRegistroDestino" mnemonicParsing="false" onAction="#abrirRegistroDestinos" text="Registro de destinos" />
+                  <MenuItem fx:id="MIConsultaPaquete" mnemonicParsing="false" onAction="#abrirConsultaPaquetes" text="Consulta de paquetes" />
+                  <MenuItem fx:id="MIConsultaDestino" mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consulta de destinos" />
+                  <MenuItem fx:id="MiClose" mnemonicParsing="false" onAction="#salir" text="Salir" />
+               </items>
+            </Menu>
+            <Menu fx:id="MProcesos" mnemonicParsing="false" text="Procesos">
+               <items>
+                  <MenuItem fx:id="MIGuardarHilo" mnemonicParsing="false" onAction="#guardarConHilo" text="Guardar con Hilo" />
+                  <MenuItem fx:id="MIRunLater" mnemonicParsing="false" onAction="#guardarRunLater" text="runLater" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="323.0" prefWidth="580.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label fx:id="lblTitulo" layoutX="172.0" layoutY="34.0" text="Registro de Paquetes">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigo" layoutX="177.0" layoutY="78.0" prefHeight="25.0" prefWidth="167.0" promptText="Digite el codigo" />
+            <TextField fx:id="txtDestinatario" layoutX="177.0" layoutY="123.0" prefHeight="25.0" prefWidth="167.0" promptText="Digite el destinatario" />
+            <TextField fx:id="txtPeso" layoutX="177.0" layoutY="169.0" prefHeight="25.0" prefWidth="167.0" promptText="Digite el peso " />
+            <ComboBox fx:id="cmbDestino" layoutX="177.0" layoutY="212.0" prefHeight="25.0" prefWidth="167.0" promptText="Destino" />
+            <Button fx:id="btnGuardar" layoutX="139.0" layoutY="258.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="77.0" text="Guardar" onAction="#guardarPaquete" />
+            <ProgressBar fx:id="progressBar" layoutX="161.0" layoutY="310.0" prefWidth="200.0" progress="0.0" />
+            <Label fx:id="lblMensajes" alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="341.0" prefHeight="41.0" prefWidth="177.0" text="Esperando datos ..." textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnCargar" layoutX="294.0" layoutY="258.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="77.0" text="Cargar" onAction="#CargarDestinos" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

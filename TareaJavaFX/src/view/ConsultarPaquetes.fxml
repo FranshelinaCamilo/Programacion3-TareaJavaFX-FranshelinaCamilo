@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:controller="controller.ConsultaPaquetesController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="MBMenu" prefHeight="25.0" prefWidth="520.0">
+         <menus>
+            <Menu fx:id="MArchivo" mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem fx:id="MIRegistroPaquete" mnemonicParsing="false" onAction="#abrirRegistroPaquetes" text="Registro de paquetes" />
+                  <MenuItem fx:id="MIRegistroDestino" mnemonicParsing="false" onAction="#abrirRegistroDestinos" text="Registro de destinos" />
+                  <MenuItem fx:id="MIConsultaPaquete" mnemonicParsing="false" onAction="#abrirConsultaPaquetes" text="Consulta de paquetes" />
+                  <MenuItem fx:id="MIConsultaDestino" mnemonicParsing="false" onAction="#abrirConsultaDestinos" text="Consulta de destinos" />
+                  <MenuItem fx:id="MiClose" mnemonicParsing="false" onAction="#salir" text="Salir" />
+               </items>
+            </Menu>
+            <Menu fx:id="MProcesos" mnemonicParsing="false" text="Procesos">
+               <items>
+                  <MenuItem fx:id="MIGuardarHilo" mnemonicParsing="false" text="Guardar con Hilo" />
+                  <MenuItem fx:id="MIRunLater" mnemonicParsing="false" text="runLater" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="399.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="tvTabla" layoutX="43.0" layoutY="114.0" prefHeight="213.0" prefWidth="514.0">
+              <columns>
+                <TableColumn fx:id="colCodigo" prefWidth="119.0" text="Codigo" />
+                <TableColumn fx:id="colDestinatario" prefWidth="162.0" text="Destinatario" />
+                  <TableColumn fx:id="colPeso" prefWidth="69.0" text="Peso" />
+                  <TableColumn fx:id="colDestino" prefWidth="163.0" text="Destino" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblTitulo" layoutX="210.0" layoutY="49.0" text="Paquetes Registrados">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
